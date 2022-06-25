@@ -117,11 +117,11 @@ nav.sticky {
 
 /////SIDENAV SECTION/////
 .sideNav {
-    width: 300px;
+    width: 220px;
     height: 100vh;
     background: $color1;
     position: fixed;
-    left: -300px;
+    left: -250px;
     top: 0;
     transition: 0.5s linear all;
 
@@ -786,4 +786,198 @@ nav.sticky {
         }
     }
 
+}
+
+
+
+
+
+
+
+/////////CONTACT US PAGE////////
+.contactPage{
+    width: 100%;
+    height: auto;
+    background: $bgColor;
+    padding-top: 100px;
+
+    h2{
+        text-align: center;
+        padding-top: 70px;
+        font-weight: bolder;
+        font-size: 50px;
+    }
+    
+
+    .rowWrapper{
+        width: 80%;
+        margin: auto;
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        form{
+            width: 100%;
+            padding: 20px 35px;
+
+            input{
+                width: 100%;
+                margin: 8px 0;
+                padding: 10px 20px;
+                border-radius: 10px;
+                outline: none;
+                border: 1px solid transparent;
+                transition: 0.2s linear all;
+
+                &:focus{
+                    box-shadow: 0 0 10px $color1;
+
+                }
+
+                &::placeholder{
+                    font-size: 12px;
+                }
+            }
+
+            textarea{
+                width: 100%;
+                margin: 8px 0;
+                max-height: 250px;
+                min-height: 150px;
+                padding: 10px 20px;
+                border-radius: 10px;
+                outline: none;
+                border: 1px solid transparent;
+
+                &:focus{
+                    box-shadow: 0 0 10px $color1;
+
+                }
+
+                &::placeholder{
+                    font-size: 12px;
+                }
+            }
+
+            button{
+                padding: 10px 25px;
+                outline: none;
+                border: 1px solid transparent;
+            }
+        }
+    }
+}
+
+
+////RESPONSIVE CONTACT US PAGE//////
+@media screen and (max-width:800px){
+
+    .contactPage{
+        width: 100%;
+        height: auto;
+        background: $bgColor;
+        padding-top: 100px;
+    
+        h2{
+            padding-top: 40px;
+   
+        }
+
+        .rowWrapper{
+            width: 100%;
+
+        }
+    }
+    
+}
+
+
+@media screen and (max-width:500px){
+
+    .contactPage{
+
+    
+        h2{
+            padding-top: 40px;
+            font-size: 35px;
+
+        }
+
+        .rowWrapper{
+
+            form{
+                padding: 10px 15px;
+            }
+        }
+        
+    }
+    
+}
+
+
+
+
+//////MAP SECTION/////
+.map{
+    width: 100%;
+    background: $bgColor;
+
+    .rowWrapper{
+        width: 90%;
+        margin: auto;
+        padding: 20px 0;
+        
+        iframe{
+            width: 100%;
+        }
+    }
+}
+
+
+
+//////Privacy Policy Section//////
+.policy{
+    width: 100%;
+    background: $bgColor;
+    padding-top: 100px;
+
+    .rowWrapper{
+        width: 80%;
+        margin: auto;
+        padding: 50px 0;
+
+        h1{
+            font-weight: bolder;
+        }
+
+
+        h2{
+            font-weight: bolder;
+        }
+    }
+}
+
+
+
+/////About Us Section//////
+.about{
+    width: 100%;
+    background: $bgColor;
+    padding: 100px 0;
+
+    .rowWrapper{
+        width: 80%;
+        margin: auto;
+        padding: 100px 0;
+
+        h3{
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        p{
+            font-size: 20px;
+        }
+    }
 }
