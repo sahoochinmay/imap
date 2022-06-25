@@ -103,11 +103,11 @@ nav.sticky {
 }
 
 .sideNav {
-  width: 300px;
+  width: 220px;
   height: 100vh;
   background: #6d4aff;
   position: fixed;
-  left: -300px;
+  left: -250px;
   top: 0;
   -webkit-transition: 0.5s linear all;
   transition: 0.5s linear all;
@@ -658,5 +658,190 @@ nav.sticky {
   .footer .rowDivide .links ul {
     padding-left: 0;
   }
+}
+
+.contactPage {
+  width: 100%;
+  height: auto;
+  background: #f7f5ff;
+  padding-top: 100px;
+}
+
+.contactPage h2 {
+  text-align: center;
+  padding-top: 70px;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+.contactPage .rowWrapper {
+  width: 80%;
+  margin: auto;
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contactPage .rowWrapper form {
+  width: 100%;
+  padding: 20px 35px;
+}
+
+.contactPage .rowWrapper form input {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid transparent;
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+}
+
+.contactPage .rowWrapper form input:focus {
+  -webkit-box-shadow: 0 0 10px #6d4aff;
+          box-shadow: 0 0 10px #6d4aff;
+}
+
+.contactPage .rowWrapper form input::-webkit-input-placeholder {
+  font-size: 12px;
+}
+
+.contactPage .rowWrapper form input:-ms-input-placeholder {
+  font-size: 12px;
+}
+
+.contactPage .rowWrapper form input::-ms-input-placeholder {
+  font-size: 12px;
+}
+
+.contactPage .rowWrapper form input::placeholder {
+  font-size: 12px;
+}
+
+.contactPage .rowWrapper form textarea {
+  width: 100%;
+  margin: 8px 0;
+  max-height: 250px;
+  min-height: 150px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+.contactPage .rowWrapper form textarea:focus {
+  -webkit-box-shadow: 0 0 10px #6d4aff;
+          box-shadow: 0 0 10px #6d4aff;
+}
+
+.contactPage .rowWrapper form textarea::-webkit-input-placeholder {
+  font-size: 12px;
+}
+
+.contactPage .rowWrapper form textarea:-ms-input-placeholder {
+  font-size: 12px;
+}
+
+.contactPage .rowWrapper form textarea::-ms-input-placeholder {
+  font-size: 12px;
+}
+
+.contactPage .rowWrapper form textarea::placeholder {
+  font-size: 12px;
+}
+
+.contactPage .rowWrapper form button {
+  padding: 10px 25px;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+@media screen and (max-width: 800px) {
+  .contactPage {
+    width: 100%;
+    height: auto;
+    background: #f7f5ff;
+    padding-top: 100px;
+  }
+  .contactPage h2 {
+    padding-top: 40px;
+  }
+  .contactPage .rowWrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contactPage h2 {
+    padding-top: 40px;
+    font-size: 35px;
+  }
+  .contactPage .rowWrapper form {
+    padding: 10px 15px;
+  }
+}
+
+.map {
+  width: 100%;
+  background: #f7f5ff;
+}
+
+.map .rowWrapper {
+  width: 90%;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.map .rowWrapper iframe {
+  width: 100%;
+}
+
+.policy {
+  width: 100%;
+  background: #f7f5ff;
+  padding-top: 100px;
+}
+
+.policy .rowWrapper {
+  width: 80%;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.policy .rowWrapper h1 {
+  font-weight: bolder;
+}
+
+.policy .rowWrapper h2 {
+  font-weight: bolder;
+}
+
+.about {
+  width: 100%;
+  background: #f7f5ff;
+  padding: 100px 0;
+}
+
+.about .rowWrapper {
+  width: 80%;
+  margin: auto;
+  padding: 100px 0;
+}
+
+.about .rowWrapper h3 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.about .rowWrapper p {
+  font-size: 20px;
 }
 /*# sourceMappingURL=style.css.map */
