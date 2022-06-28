@@ -1,5 +1,3 @@
-
-
 var getBtn = document.getElementById('menuBtn');
 var getSideBar = document.getElementById('sideNav');
 
