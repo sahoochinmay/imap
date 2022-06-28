@@ -88,6 +88,13 @@ nav .rowDivide .links ul li {
 
 nav .rowDivide .links ul li a {
   text-decoration: none;
+  color: #6d4aff;
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+}
+
+nav .rowDivide .links ul li a:hover {
+  color: black;
 }
 
 nav .rowDivide .loginSignup a {
@@ -111,6 +118,7 @@ nav.sticky {
   top: 0;
   -webkit-transition: 0.5s linear all;
   transition: 0.5s linear all;
+  z-index: 800;
 }
 
 .sideNav ul {
@@ -843,5 +851,253 @@ nav.sticky {
 
 .about .rowWrapper p {
   font-size: 20px;
+}
+
+.active {
+  background: #6d4aff;
+}
+
+.mailBoxNav {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 800;
+}
+
+.mailbox_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #f7f5ff;
+}
+
+.mailbox_main .sidebar {
+  position: relative;
+  padding: 0 10px;
+  width: 250px;
+  background-color: #f7f5ff;
+  height: calc(100vh - 60px);
+  z-index: 700;
+  -webkit-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+}
+
+.mailbox_main .sidebar button {
+  display: inline-block;
+  width: 80%;
+  padding: 10px 12px;
+  margin: 25px 0;
+  outline: none;
+  border: 1px solid transparent;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: white;
+  border-radius: 30px;
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+}
+
+.mailbox_main .sidebar button:hover {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.mailbox_main .sidebar button i {
+  color: #6d4aff;
+  margin-right: 10px;
+}
+
+.mailbox_main .sidebar ul {
+  margin-top: 100px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.mailbox_main .sidebar ul li {
+  background: white;
+  padding: 10px 12px;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.mailbox_main .sidebar ul li:hover::before {
+  width: 100%;
+}
+
+.mailbox_main .sidebar ul li:hover a {
+  color: white;
+}
+
+.mailbox_main .sidebar ul li::before {
+  content: "";
+  background: #6d4aff;
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+}
+
+.mailbox_main .sidebar ul li a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+}
+
+.mailbox_main .sidebar ul li a i {
+  margin-right: 10px;
+}
+
+.mailbox_main .mailArea {
+  background: #f7f5ff;
+  width: calc(100vw - 250px);
+}
+
+.mailbox_main .mailArea .mailContainer {
+  margin: 20px 25px;
+  height: calc(100vh - 100px);
+  overflow: auto;
+}
+
+.mailbox_main .mailArea .mailContainer table {
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.mailbox_main .mailArea .mailContainer table tbody tr:nth-child(even) {
+  background: white;
+}
+
+.mailbox_main .mailArea .mailContainer table.customTable {
+  width: 100%;
+  border-collapse: collapse;
+  color: #000000;
+}
+
+.mailbox_main .mailArea .mailContainer table.customTable td,
+.mailbox_main .mailArea .mailContainer table.customTable th {
+  padding: 12px;
+}
+
+.mailbox_main .mailArea .mailContainer table.customTable th {
+  -webkit-box-shadow: 0 0 30px black;
+          box-shadow: 0 0 30px black;
+}
+
+.mailbox_main .mailArea .mailContainer table.customTable thead {
+  background: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.mailbox_main .mailArea .mailContainer table.customTable thead tr {
+  width: 100%;
+}
+
+.mailDetailsWrapper {
+  margin: 20px 25px;
+  height: calc(100vh - 100px);
+  overflow: auto;
+  background: white;
+  border-radius: 0px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  -webkit-box-shadow: 5px 5px 10px #c4c4c4, -5px -5px 10px #ffffff;
+          box-shadow: 5px 5px 10px #c4c4c4, -5px -5px 10px #ffffff;
+  border-radius: 20px;
+}
+
+.mailDetailsWrapper .mailDetails {
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.mailDetailsWrapper .mailDetails .mailLinks {
+  padding-bottom: 20px;
+}
+
+.mailDetailsWrapper .mailDetails .mailLinks ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.mailDetailsWrapper .mailDetails .mailLinks ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.mailDetailsWrapper .mailDetails .mailLinks ul li:first-child {
+  margin-left: 0;
+}
+
+.mailDetailsWrapper .mailDetails .mailLinks ul li:first-child a:hover i {
+  background: black;
+  color: white;
+}
+
+.mailDetailsWrapper .mailDetails .mailLinks ul li:first-child a i {
+  background: white;
+  padding: 10px 12px;
+  border-radius: 50%;
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+}
+
+.mailDetailsWrapper .mailDetails .mailLinks ul li a {
+  text-decoration: none;
+  color: #6d4aff;
+}
+
+.mailDetailsWrapper .mailDetails .mailShortDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mailDetailsWrapper .mailDetails .mailShortDetails .shortInfo p {
+  margin-bottom: 0.8px;
+  display: inline-block;
+  width: 100px;
+}
+
+.mailDetailsWrapper .mailDetails .mailShortDetails img {
+  width: 90px;
+  height: 90px;
+  margin-right: 20px;
+}
+
+.mailDetailsWrapper .messageDetails {
+  padding: 50px 0;
+}
+
+@media screen and (max-width: 800px) {
+  .mailbox_main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mailbox_main .mailArea {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 100px;
+  }
+  .mailbox_main .sidebar {
+    left: -250px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

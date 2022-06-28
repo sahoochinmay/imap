@@ -13,6 +13,7 @@ $textColor: #372580;
 $textColor2: #382b85;
 $bgColor: rgb(247, 245, 255);
 $footerColor: #000;
+$whiteShade: #FAF9F6;
 
 
 //////Common///////
@@ -92,6 +93,12 @@ nav {
 
                     a {
                         text-decoration: none;
+                        color: $color1;
+                        transition: 0.2s linear all;
+
+                        &:hover {
+                            color: black;
+                        }
                     }
                 }
             }
@@ -124,6 +131,7 @@ nav.sticky {
     left: -250px;
     top: 0;
     transition: 0.5s linear all;
+    z-index: 800;
 
 
     ul {
@@ -980,4 +988,282 @@ nav.sticky {
             font-size: 20px;
         }
     }
+}
+
+
+
+/////MAILBOX SECTION//////
+/// 
+.active {
+    background: $color1;
+}
+
+.mailBoxNav {
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.3);
+    position: relative;
+    z-index: 800;
+}
+
+.mailbox_main {
+    display: flex;
+    background: $bgColor;
+
+    .sidebar {
+        position: relative;
+        padding: 0 10px;
+        width: 250px;
+        background-color: $bgColor;
+        height: calc(100vh - 60px);
+        z-index: 700;
+        transition: 0.3s linear all;
+
+
+        button {
+            display: inline-block;
+            width: 80%;
+            padding: 10px 12px;
+            margin: 25px 0;
+            outline: none;
+            border: 1px solid transparent;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 30px;
+            transition: 0.2s linear all;
+
+            &:hover {
+                box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.3);
+            }
+
+            i {
+                color: $color1;
+                margin-right: 10px;
+            }
+        }
+
+
+        ul {
+            margin-top: 100px;
+            list-style: none;
+            padding-left: 0;
+
+            li {
+
+                background: white;
+                padding: 10px 12px;
+                margin-bottom: 5px;
+                position: relative;
+                z-index: 1;
+
+                &:hover::before {
+                    width: 100%;
+                }
+
+                &:hover a {
+                    color: white;
+                }
+
+
+                &::before {
+                    content: "";
+                    background: $color1;
+                    width: 0%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: -1;
+                    transition: 0.3s linear all;
+
+                }
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                    display: inline-block;
+                    width: 100%;
+
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .mailArea {
+        background: $bgColor;
+        width: calc(100vw - 250px);
+
+
+
+        .mailContainer {
+            margin: 20px 25px;
+            height: calc(100vh - 100px);
+            overflow: auto;
+
+
+            table {
+                width: 100%;
+                padding: 10px 15px;
+
+                tbody {
+                    tr {
+                        &:nth-child(even) {
+                            background: white;
+                        }
+                    }
+                }
+
+                &.customTable {
+                    width: 100%;
+                    border-collapse: collapse;
+                    color: #000000;
+                }
+
+
+                &.customTable td,
+                &.customTable th {
+
+                    padding: 12px;
+
+                }
+
+                &.customTable th {
+                    box-shadow: 0 0 30px black;
+                }
+
+                &.customTable thead {
+                    background: white;
+                    position: sticky;
+                    top: 0;
+
+
+
+                    tr {
+                        width: 100%;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+.mailDetailsWrapper {
+    margin: 20px 25px;
+    height: calc(100vh - 100px);
+    overflow: auto;
+    background: white;
+    border-radius: 0px;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 5px 5px 10px #c4c4c4,
+        -5px -5px 10px #ffffff;
+    border-radius: 20px;
+
+
+    .mailDetails {
+        width: 100%;
+        padding: 10px 15px;
+
+        .mailLinks {
+            padding-bottom: 20px;
+            ul {
+                list-style: none;
+                padding-left: 0;
+
+                li {
+                    display: inline-block;
+                    margin: 0 10px;
+                
+
+                    &:first-child {
+                        margin-left: 0;
+
+                        a{
+
+                            &:hover i{
+                                background: black;
+                                color: white;
+                            }
+                      
+
+                            i {
+                                background: white;
+                                padding: 10px 12px;
+                                border-radius: 50%;
+                                transition: 0.2s linear all;
+    
+                            }
+                        }
+                    }
+
+
+                    a {
+                        text-decoration: none;
+                        color: $color1;
+
+                        
+                    }
+                }
+            }
+        }
+
+        .mailShortDetails {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+
+            .shortInfo {
+                p {
+                    margin-bottom: 0.8px;
+                    display: inline-block;
+                    width: 100px;
+                }
+            }
+
+
+            img {
+                width: 90px;
+                height: 90px;
+                margin-right: 20px;
+            }
+        }
+
+
+    }
+
+    .messageDetails{
+        padding: 50px 0;
+    }
+
+}
+
+
+///////MAIL DETAILS RESPONSIVE//////
+@media screen and (max-width:800px) {
+
+    .mailbox_main {
+        flex-direction: column;
+
+        .mailArea {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-top: 100px;
+        }
+
+
+        .sidebar {
+
+            left: -250px;
+
+        }
+    }
+
 }
