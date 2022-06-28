@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "PT Sans", sans-serif;
 }
 
@@ -51,7 +51,7 @@ nav i {
   top: 50%;
   right: 30px;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
   cursor: pointer;
   visibility: hidden;
   font-size: 500px;
@@ -65,11 +65,11 @@ nav .rowDivide {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav .rowDivide .logo img {
@@ -106,7 +106,7 @@ nav.sticky {
   background: #f7f5ff;
   padding: 15px 0;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .sideNav {
@@ -142,7 +142,7 @@ nav.sticky {
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
   background: #382b85;
   width: 0%;
   height: 100%;
@@ -172,11 +172,11 @@ nav.sticky {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   nav .rowDivide .logo img {
     width: 70px;
@@ -196,18 +196,18 @@ nav.sticky {
 .header {
   width: 100%;
   height: auto;
-  background: url("assets/images/hero-2x.webp"), #f7f5ff;
+  background: url("../assets/images/hero-2x.webp"), #f7f5ff;
   background-position: top;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 100px 0 200px;
 }
 
@@ -218,11 +218,11 @@ nav.sticky {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 100px;
 }
 
@@ -245,7 +245,7 @@ nav.sticky {
 .header .headerWrapper img {
   width: 70px;
   -webkit-box-shadow: 0 0 5px #6d4aff;
-  box-shadow: 0 0 5px #6d4aff;
+          box-shadow: 0 0 5px #6d4aff;
   border-radius: 15px;
 }
 
@@ -285,18 +285,18 @@ nav.sticky {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .details .row .leftSec {
   -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
+      flex-basis: 50%;
 }
 
 .details .row .leftSec h3 {
@@ -315,7 +315,7 @@ nav.sticky {
 
 .details .row .rightSec {
   -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
+      flex-basis: 50%;
 }
 
 .details .row .rightSec img {
@@ -325,11 +325,11 @@ nav.sticky {
 @media screen and (max-width: 1248px) {
   .details .row .leftSec {
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
   }
   .details .row .rightSec {
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
     margin-top: 50px;
   }
   .details .row .rightSec img {
@@ -366,18 +366,18 @@ nav.sticky {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .domain .row .leftSec {
   -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
+      flex-basis: 50%;
 }
 
 .domain .row .leftSec img {
@@ -386,7 +386,7 @@ nav.sticky {
 
 .domain .row .rightSec {
   -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
+      flex-basis: 50%;
   padding: 0 25px;
 }
 
@@ -427,19 +427,19 @@ nav.sticky {
   }
   .domain .row .leftSec {
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
     -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
+        -ms-flex-order: 2;
+            order: 2;
     margin: 30px 0;
   }
   .domain .row .rightSec {
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
     padding: 0 15px;
     -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
+        -ms-flex-order: 1;
+            order: 1;
   }
   .domain .row .rightSec p {
     font-size: 25px;
@@ -462,15 +462,15 @@ nav.sticky {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .faq .row .leftSec {
   -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
+      flex-basis: 50%;
   padding-right: 50px;
 }
 
@@ -505,7 +505,7 @@ nav.sticky {
 
 .faq .row .rightSec {
   -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
+      flex-basis: 50%;
 }
 
 .faq .row .rightSec .accordion .accordion-item {
@@ -516,13 +516,7 @@ nav.sticky {
   border-radius: 10px;
 }
 
-.faq
-  .row
-  .rightSec
-  .accordion
-  .accordion-item
-  .accordion-header
-  .accordion-button {
+.faq .row .rightSec .accordion .accordion-item .accordion-header .accordion-button {
   border-radius: 10px;
   font-size: 20px !important;
   font-style: italic;
@@ -536,13 +530,7 @@ nav.sticky {
     font-size: 18px;
     padding-top: 12px;
   }
-  .faq
-    .row
-    .rightSec
-    .accordion
-    .accordion-item
-    .accordion-header
-    .accordion-button {
+  .faq .row .rightSec .accordion .accordion-item .accordion-header .accordion-button {
     font-size: 20px !important;
   }
 }
@@ -553,7 +541,7 @@ nav.sticky {
   }
   .faq .row .leftSec {
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
     padding-right: 0;
   }
   .faq .row .leftSec h2 {
@@ -561,15 +549,9 @@ nav.sticky {
   }
   .faq .row .rightSec {
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
   }
-  .faq
-    .row
-    .rightSec
-    .accordion
-    .accordion-item
-    .accordion-header
-    .accordion-button {
+  .faq .row .rightSec .accordion .accordion-item .accordion-header .accordion-button {
     font-size: 18px !important;
   }
 }
@@ -580,7 +562,7 @@ nav.sticky {
   }
   .faq .row .leftSec {
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
     padding-right: 0;
   }
   .faq .row .leftSec h2 {
@@ -594,15 +576,9 @@ nav.sticky {
   }
   .faq .row .rightSec {
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
   }
-  .faq
-    .row
-    .rightSec
-    .accordion
-    .accordion-item
-    .accordion-header
-    .accordion-button {
+  .faq .row .rightSec .accordion .accordion-item .accordion-header .accordion-button {
     font-size: 12px !important;
   }
 }
@@ -620,13 +596,13 @@ nav.sticky {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer .rowDivide .logo a {
@@ -659,32 +635,32 @@ nav.sticky {
 @media screen and (max-width: 800px) {
   .footer .rowDivide .logo {
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .footer .rowDivide .logo a {
     font-size: 12px;
   }
   .footer .rowDivide .links {
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 15px;
   }
   .footer .rowDivide .links ul {
@@ -714,11 +690,11 @@ nav.sticky {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contactPage .rowWrapper form {
@@ -739,7 +715,7 @@ nav.sticky {
 
 .contactPage .rowWrapper form input:focus {
   -webkit-box-shadow: 0 0 10px #6d4aff;
-  box-shadow: 0 0 10px #6d4aff;
+          box-shadow: 0 0 10px #6d4aff;
 }
 
 .contactPage .rowWrapper form input::-webkit-input-placeholder {
@@ -771,7 +747,7 @@ nav.sticky {
 
 .contactPage .rowWrapper form textarea:focus {
   -webkit-box-shadow: 0 0 10px #6d4aff;
-  box-shadow: 0 0 10px #6d4aff;
+          box-shadow: 0 0 10px #6d4aff;
 }
 
 .contactPage .rowWrapper form textarea::-webkit-input-placeholder {
@@ -883,7 +859,7 @@ nav.sticky {
 
 .mailBoxNav {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 800;
 }
@@ -916,7 +892,7 @@ nav.sticky {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
   background: white;
   border-radius: 30px;
   -webkit-transition: 0.2s linear all;
@@ -925,7 +901,7 @@ nav.sticky {
 
 .mailbox_main .sidebar button:hover {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .mailbox_main .sidebar button i {
@@ -1012,7 +988,7 @@ nav.sticky {
 
 .mailbox_main .mailArea .mailContainer table.customTable th {
   -webkit-box-shadow: 0 0 30px black;
-  box-shadow: 0 0 30px black;
+          box-shadow: 0 0 30px black;
 }
 
 .mailbox_main .mailArea .mailContainer table.customTable thead {
@@ -1034,7 +1010,7 @@ nav.sticky {
   border-radius: 0px;
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
   -webkit-box-shadow: 5px 5px 10px #c4c4c4, -5px -5px 10px #ffffff;
-  box-shadow: 5px 5px 10px #c4c4c4, -5px -5px 10px #ffffff;
+          box-shadow: 5px 5px 10px #c4c4c4, -5px -5px 10px #ffffff;
   border-radius: 20px;
 }
 
@@ -1084,10 +1060,10 @@ nav.sticky {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .mailDetailsWrapper .mailDetails .mailShortDetails .shortInfo p {
@@ -1110,8 +1086,8 @@ nav.sticky {
   .mailbox_main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .mailbox_main .mailArea {
     width: 100%;
