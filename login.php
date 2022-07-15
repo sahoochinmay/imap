@@ -2,7 +2,7 @@
 <?php
 include './config/config.php';
 if (isLoggedin()) {
-  header("Location:mailbox.php");
+  header("Location:inbox.php");
   exit;
 }
 if (isset($_POST['login'])) {
@@ -24,7 +24,7 @@ if (isset($_POST['login'])) {
     $_SESSION['email'] = $email;
     $_SESSION['username'] = $row['name'];
     $_SESSION['photo'] = $row['photo'];
-    header('Location:mailbox.php');
+    header('Location:inbox.php');
     exit();
   }
 }

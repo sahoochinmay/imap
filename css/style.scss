@@ -970,9 +970,9 @@ nav.sticky {
 
         tbody {
           tr {
-            &:nth-child(even) {
               background: white;
-            }
+              cursor: pointer;
+              font-size: 13px;
           }
         }
 

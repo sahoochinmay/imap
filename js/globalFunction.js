@@ -20,3 +20,17 @@ function validate() {
   }
   return true;
 }
+// NOTE: 1 sidebar script
+
+var getmenuBtn = document.getElementById("menuButton");
+var getsidebar = document.getElementById("sidebar");
+
+// getsidebar.style.left = "-250px";
+
+getmenuBtn.onclick = function () {
+  if (getsidebar.style.left == "-250px") {
+    getsidebar.style.left = "0px";
+  } else {
+    getsidebar.style.left = "-250px";
+  }
+};

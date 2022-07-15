@@ -972,8 +972,10 @@ nav.sticky {
   padding: 10px 15px;
 }
 
-.mailbox_main .mailArea .mailContainer table tbody tr:nth-child(even) {
+.mailbox_main .mailArea .mailContainer table tbody tr {
   background: white;
+  cursor: pointer;
+  font-size: 13px;
 }
 
 .mailbox_main .mailArea .mailContainer table.customTable {

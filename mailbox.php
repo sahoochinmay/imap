@@ -1,3 +1,11 @@
+<?php
+include './config/config.php';
+if (!isLoggedin()) {
+    header("Location:login.php");
+    exit;
+}
+$user = $_SESSION['email'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,8 +16,7 @@
     <title>Mailbox</title>
 
     <!----BOOTSTRAp 5----->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!--------CUSTOM CSS------->
     <link rel="stylesheet" href="css/style.css">
@@ -29,8 +36,7 @@
 <body>
 
 
-    <nav class="mailBoxNav d-flex justify-content-between  align-items-center"
-        style="padding: 10px 40px;position: relative;">
+    <nav class="mailBoxNav d-flex justify-content-between  align-items-center" style="padding: 10px 40px;position: relative;">
         <i class="fa fa-bars" aria-hidden="true" id="menuButton"></i>
         <div class="logo">
             <a href="mailbox.html"><img src="assets/images/logomain.png" alt="" style="width: 80px;"></a>
@@ -38,8 +44,7 @@
         <div>
             <div class="d-flex  justify-content-end  align-items-center flex-row">
                 <h5 style="margin-right: 10px;margin-top: 5px;">Welcome, Chinmay</h5>
-                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" alt="Avatar"
-                    style="height: 35px;" />
+                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" alt="Avatar" style="height: 35px;" />
             </div>
         </div>
     </nav>
@@ -253,8 +258,7 @@
                             </div>
 
 
-                            <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-                                alt="" srcset="">
+                            <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" srcset="">
 
                         </div>
 
@@ -305,20 +309,15 @@
                 // getsidebar.style.left = "-250px";
 
 
-                getmenuBtn.onclick = function () {
+                getmenuBtn.onclick = function() {
                     if (getsidebar.style.left == "-250px") {
                         getsidebar.style.left = "0px";
 
-                    }
-
-                    else {
+                    } else {
                         getsidebar.style.left = "-250px";
 
                     }
                 }
-
-
-
             </script>
 
 
@@ -330,9 +329,7 @@
     <!-- <script src="navbar.js"></script> -->
     <script src="js/navbarSticky.js"></script>
     <!-------BOotstrap 5 JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 
