@@ -39,7 +39,7 @@ $user = $_SESSION['email'];
                             <div class="shortInfo">
                                 <p>Subject </p>: <span id="subject"></span><br>
                                 <p>From</p>: <span id="from"></span><br>
-                                <p>To</p>: <span id="to"></span><br>
+                                <p>To</p>: <span id="to_mail"></span><br>
                                 <p>Date</p>: <span id="date"></span>
                             </div>
                             <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" srcset="">
@@ -61,7 +61,7 @@ $user = $_SESSION['email'];
             if (mail_data) {
                 document.getElementById('subject').innerText = mail_data?.sub
                 document.getElementById('from').innerText = mail_data?.sender
-                document.getElementById('to').innerText = mail_data?.receiver
+                document.getElementById('to_mail').innerText = mail_data?.receiver
                 let dttimeArr = mail_data?.dttime?.split('-');
                 console.log(dttimeArr)
                 document.getElementById('date').innerText = dttimeArr[2] + '-' + dttimeArr[1] + '-' + dttimeArr[0]
