@@ -8,7 +8,7 @@
 	  die("<H2>Unable to Connect</H2>");
 
 	function isLoggedin(){		
-		if(isset($_session["user"]))
+		if(isset($_SESSION["username"]))
 			return true;
 		else
 			return false;

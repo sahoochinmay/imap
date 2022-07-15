@@ -18,6 +18,5 @@ function validate() {
     alert("Invalid Phone No");
     return false;
   }
-
   return true;
 }
