@@ -25,12 +25,12 @@
         <form action="./actions/sendmail.php" method="post" enctype="multipart/form-data">
             <div>
                 <label>To</label><br>
-                <input name="to" id="to" required="" class="w3-input w3-border w3-hover-shadow w3-margin-bottom" type="email" value="">
+                <input name="to" id="to"  required="" class="input_text w3-input w3-border w3-hover-shadow w3-margin-bottom" type="email" value="">
             </div>
 
             <div>
                 <label>Subject</label><br>
-                <input name="sub" id="sub" required="" class="w3-input w3-border w3-hover-shadow  w3-margin-bottom" type="text" value="">
+                <input name="sub" id="sub" required="" class=" input_text w3-input w3-border w3-hover-shadow  w3-margin-bottom" type="text" value="">
             </div>
             <div>
                 <textarea name="msg" id="msg" class="w3-input w3-border w3-hover-shadow  w3-margin-bottom" style="height: 200px" placeholder="What's on your mind?" value=""></textarea>

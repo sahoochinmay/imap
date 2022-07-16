@@ -68,25 +68,25 @@ $user = $_SESSION['email'];
         </div>
     </main>
     <!-- The Modal -->
-    <div id="myModal" class="modal">
+    <div id="myModal1" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
             <div class="SendMailTop" style="display: flex; justify-content:space-between; align-items:center">
                 <h5 style="margin-bottom:0">Send Mail</h5>
-                <span class="close">&times;</span>
+                <span class="close" id="close1">&times;</span>
             </div>
             <hr>
-            <form action="./actions/sendmail.php" method="post" enctype="multipart/form-data">
+            <form action="./actions/sendDraftmail.php" method="post" enctype="multipart/form-data">
                 <div>
                     <label>To</label><br>
-                    <input name="to" id="to" required="" class="w3-input w3-border w3-hover-shadow w3-margin-bottom" type="email" value="">
+                    <input name="to" id="to1" required="" class=" input_text w3-input w3-border w3-hover-shadow w3-margin-bottom" type="email" value="">
                 </div>
                 <div>
                     <label>Subject</label><br>
-                    <input name="sub" id="sub" required="" class="w3-input w3-border w3-hover-shadow  w3-margin-bottom" type="text" value="">
+                    <input name="sub" id="sub1" required="" class="input_text w3-input w3-border w3-hover-shadow  w3-margin-bottom" type="text" value="">
                 </div>
                 <div>
-                    <textarea name="msg" id="msg" class="w3-input w3-border w3-hover-shadow  w3-margin-bottom" style="height: 200px" placeholder="What's on your mind?" value=""></textarea>
+                    <textarea name="msg" id="msg1" class="w3-input w3-border w3-hover-shadow  w3-margin-bottom" style="height: 200px" placeholder="What's on your mind?" value=""></textarea>
                 </div>
                 <input type="hidden" value="" name="h1" id="h1">
                 <div class="w3-section">
@@ -94,28 +94,41 @@ $user = $_SESSION['email'];
                     <!-- <input type="hidden" value="" name="attach" id="attach"> -->
                     <!-- <input type="file" name="attachment"> -->
                     <!-- <br> -->
-                    <a class="w3-btn w3-red" href="#" id="modal_close_btn" >Cancel</a>
+                    <a class="w3-btn w3-red" href="#" id="modal_close_btn1">Cancel</a>
 
                     <div class="rightSec">
                         <input class="saveMail" type="submit" name="btnSave" value="Save Mail" class="w3-btn w3-right w3-green">
                         <input class="sendMail" type="submit" name="btnSend" value="Send Mail" class="w3-btn w3-right w3-dark-grey" style="background:green; color:white;">
                     </div>
                 </div>
-                <input type="hidden" id="target" name="target" value="<?php echo "mailbox.php"; ?>" />
+                <input type="hidden" name="mid" id="mid1">
+                <input type="hidden" id="target1" name="target" value="<?php echo "mailbox.php"; ?>" />
             </form>
         </div>
     </div>
     <script>
+        var modal1 = document.getElementById("myModal1");
+        // Get the <span> element that closes the modal
+        var span1 = document.getElementById("close1");
+        // When the user clicks on <span> (x), close the modal
+        span1.onclick = function() {
+            modal1.style.display = "none";
+        };
+        // Get the <span> element that closes the modal
+        var modal_close_btn1 = document.getElementById("modal_close_btn1");
+        modal_close_btn1.onclick = function() {
+            modal1.style.display = "none";
+        };
+
         function opendraftModal(value) {
             // localStorage.setItem('mail_data', JSON.stringify(value));
             // location.href = 'mailbox.php'
-            var modal = document.getElementById("myModal");
-            modal.style.display = "block";
+            modal1.style.display = "block";
             console.log(value)
-            document.getElementById('to').value = value?.receiver
-            document.getElementById('sub').value = value?.sub
-            document.getElementById('msg').value = value?.message
-
+            document.getElementById('to1').value = value?.receiver
+            document.getElementById('sub1').value = value?.sub
+            document.getElementById('msg1').value = value?.message
+            document.getElementById('mid1').value = value?.mid
         }
     </script>
     <!-- insideBottom links -->
