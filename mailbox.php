@@ -27,7 +27,7 @@ $user = $_SESSION['email'];
                     <div class="topDetails">
                         <div class="mailLinks">
                             <ul>
-                                <li><a href="inbox.php" class="backBtn"> <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                <li><a href="javascript: history.go(-1)" class="backBtn"> <i class="fa fa-chevron-left" aria-hidden="true"></i>
                                     </a></li>
                                 <li><a href="#"> <i class="fa fa-reply-all" aria-hidden="true"></i> Reply</a></li>
                                 <li><a href="#">Forward <i class="fa fa-share" aria-hidden="true"></i> </a></li>
