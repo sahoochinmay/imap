@@ -12,7 +12,7 @@ $user = $_SESSION['email'];
 <head>
     <!-- Header links -->
     <?php include "./includes/headerlinks.php" ?>
-    <title>Sent</title>
+    <title>Sent Mails</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@ $user = $_SESSION['email'];
                         <tr>
                             <th style="width: 50px;"></th>
                             <th style="max-width: calc(100vw - 700px);">Message</th>
-                            <th>From</th>
+                            <th>To</th>
                             <th>Time</th>
                         </tr>
                     </thead>
@@ -48,7 +48,7 @@ $user = $_SESSION['email'];
                                     <td> <i class='fa fa-star-o' aria-hidden='true'></i> </td>
                                     <td style='max-width: calc(100vw - 700px);  white-space: nowrap;
                                     overflow: hidden;text-overflow: ellipsis;' ><b>$row[sub]&nbsp;&nbsp;-&nbsp;&nbsp;</b>$row[message]</td>
-                                    <td>$row[sender]</td>
+                                    <td>$row[receiver]</td>
                                     <td>$formatedDate</td>
                                  </tr>";
                         }

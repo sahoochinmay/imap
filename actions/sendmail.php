@@ -1,5 +1,5 @@
 <?php 
-	include './config/config.php';
+	include '../config/config.php';
 	if(!isLoggedin()){
 		header("Location:login.php");
 		exit;
@@ -48,7 +48,7 @@
 			echo "<br/>Mail Saved";
 
 		}			
-		header("Location:./$target");
+		header("Location:../sentmails.php");
 		exit;
 	}
 	else{

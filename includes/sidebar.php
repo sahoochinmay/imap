@@ -9,7 +9,7 @@
         <li><a href="#"> <i class="fa fa-archive" aria-hidden="true"></i> Archieve</a></li>
     </ul>
     <div class="logout">
-        <button onclick="window.location.href='logout.php'" id="primaryBtn">
+        <button onclick="window.location.href='./actions/logout.php'" id="primaryBtn">
             <i class="fa fa-sign-out" aria-hidden="true"></i>Logout</button>
     </div>
 </div>
@@ -22,7 +22,7 @@
             <span class="close">&times;</span>
         </div>
         <hr>
-        <form action="./sendmail.php" method="post" enctype="multipart/form-data">
+        <form action="./actions/sendmail.php" method="post" enctype="multipart/form-data">
             <div>
                 <label>To</label><br>
                 <input name="to" id="to" required="" class="w3-input w3-border w3-hover-shadow w3-margin-bottom" type="email" value="">
