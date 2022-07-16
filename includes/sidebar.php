@@ -62,7 +62,7 @@
         } else if (window.location?.pathname?.includes('sentmails.php')) {
             document.getElementById('sent').style = "background-color:#6d4aff;";
             document.getElementById('sent_a').style = "color:white;"
-        } else if (window.location?.pathname?.includes('sentmails.php')) {
+        } else if (window.location?.pathname?.includes('drafts.php')) {
             document.getElementById('draft').style = "background-color:#6d4aff;";
             document.getElementById('draft_a').style = "color:white;"
         }
