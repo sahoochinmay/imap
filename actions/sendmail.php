@@ -34,21 +34,26 @@
 			else{
 				echo "<script>alert('Unable to send Mail');</script>";
 			}
+			header("Location:../sentmails.php");
+			exit;
 		}
 		if(isset($_POST['btnSave'])){
 			echo "<br/>Saving Mail";
 			if(isset($_POST['mid'])){
 				$sql = "Update draft Set Sender='$sender', Receiver='$receiver',DtTime=now(), Sub='$sub', message='$msg', Attachment='$attachment' Where Mid=$_POST[mid]";
 				mysqli_query($conn,$sql);
+				echo "<br/>Mail Saved";
 			}
 			else{
 				$sql = "Insert Into draft Values(NULL,'$sender','$receiver',now(),'$sub','draft',1,'$msg','$sender','$attachment')";
 				mysqli_query($conn,$sql);
+				echo "<br/>Mail Saved";
+				header("Location:../drafts.php");
+				exit;
 			}
-			echo "<br/>Mail Saved";
 
 		}			
-		header("Location:../sentmails.php");
+		header("Location:../inbox.php");
 		exit;
 	}
 	else{

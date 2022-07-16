@@ -41,7 +41,7 @@
                 <!-- <input type="hidden" value="" name="attach" id="attach"> -->
                 <!-- <input type="file" name="attachment"> -->
                 <!-- <br> -->
-                <a class="w3-btn w3-red" href="javascriot:void(0);" onclick="f2();">Cancel</a>
+                <a class="w3-btn w3-red" href="#" id="modal_close_btn" >Cancel</a>
 
                 <div class="rightSec">
                     <input class="saveMail" type="submit" name="btnSave" value="Save Mail" class="w3-btn w3-right w3-green">
@@ -62,6 +62,9 @@
         } else if (window.location?.pathname?.includes('sentmails.php')) {
             document.getElementById('sent').style = "background-color:#6d4aff;";
             document.getElementById('sent_a').style = "color:white;"
+        } else if (window.location?.pathname?.includes('sentmails.php')) {
+            document.getElementById('draft').style = "background-color:#6d4aff;";
+            document.getElementById('draft_a').style = "color:white;"
         }
 
     }

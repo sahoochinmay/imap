@@ -12,7 +12,7 @@ $user = $_SESSION['email'];
 <head>
     <!-- Header links -->
     <?php include "./includes/headerlinks.php" ?>
-    <title>Inbox</title>
+    <title>Inbox - iMail</title>
 </head>
 
 <body>
