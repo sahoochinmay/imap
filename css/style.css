@@ -63,6 +63,7 @@
 }
 
 .modal .modal-content {
+  border-radius: 10px;
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
@@ -73,7 +74,6 @@
 
 .modal .modal-content .close {
   color: #aaaaaa;
-  float: right;
   font-size: 28px;
   font-weight: bold;
 }
@@ -83,6 +83,58 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.modal .modal-content .SendMailTop {
+  background: #faf9f6;
+  padding: 10px 8px;
+  border-radius: 10px;
+}
+
+.modal .modal-content form div {
+  margin-bottom: 10px;
+}
+
+.modal .modal-content form div #to, .modal .modal-content form div #sub {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+.modal .modal-content form div textarea {
+  margin: 20px 0;
+  width: 100%;
+  padding: 10px 2px;
+  border-radius: 4px;
+}
+
+.modal .modal-content form .w3-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 2px;
+}
+
+.modal .modal-content form .w3-section a {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 5px;
+  background: red;
+  text-decoration: none;
+  color: white;
+}
+
+.modal .modal-content form .w3-section input {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 5px;
+  border: 0px solid transparent;
 }
 
 /* Modal Content */

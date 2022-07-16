@@ -46,6 +46,7 @@ $whiteShade: #faf9f6;
 // modal ///
 /* The Modal (background) */
 .modal {
+
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 10000; /* Sit on top */
@@ -58,6 +59,7 @@ $whiteShade: #faf9f6;
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   .modal-content {
+    border-radius: 10px;
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
@@ -74,6 +76,59 @@ $whiteShade: #faf9f6;
       color: #000;
       text-decoration: none;
       cursor: pointer;
+    }
+    .SendMailTop{
+      background: $whiteShade;
+      padding: 10px 8px;
+      border-radius: 10px;
+    }
+
+    form{
+
+      div{
+        margin-bottom: 10px;
+
+        #to, #sub{
+          width: 100%;
+          border-radius: 4px;
+          border: 1px solid black;
+        }
+
+        textarea{
+          margin: 20px 0;
+          width: 100%;
+          padding: 10px 2px;
+          border-radius: 4px;
+        }
+
+      }
+
+      .w3-section{
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 2px;
+
+
+        a{
+          display: inline-block;
+          padding: 4px 10px;
+          border-radius: 5px;
+          background: red;
+          text-decoration: none;
+          color: white;
+        }
+
+
+        input{
+          display: inline-block;
+          padding: 4px 10px;
+          border-radius: 5px;
+          border: 0px solid transparent;
+        }
+      }
+      
     }
   }
 }
