@@ -46,7 +46,7 @@ $user = $_SESSION['email'];
                         </div>
                     </div>
                     <div class="messageDetails">
-                        <p id="message" >
+                        <p id="message">
                         </p>
                         <small id="footer"></small>
                     </div>
@@ -62,11 +62,19 @@ $user = $_SESSION['email'];
                 document.getElementById('subject').innerText = mail_data?.sub
                 document.getElementById('from').innerText = mail_data?.sender
                 document.getElementById('to_mail').innerText = mail_data?.receiver
-                let dttimeArr = mail_data?.dttime?.split('-');
+                let dttimeArr = mail_data?.dttime?.split(' ');
+                let formatedDate = dttimeArr[0]?.split("-")
+                let timeArray = dttimeArr[1]?.split(":")
+                let formatedTime = "";
+                if (parseInt(timeArray[0]) > 12) {
+                    formatedTime = `${parseInt(timeArray[0]) - 12}:${timeArray[1]} pm`
+                } else {
+                    formatedTime = `${timeArray[0]}:${timeArray[1]} am`
+                }
                 console.log(dttimeArr)
-                document.getElementById('date').innerText = dttimeArr[2] + '-' + dttimeArr[1] + '-' + dttimeArr[0]
+                document.getElementById('date').innerText = formatedTime + " " + formatedDate[2] + '-' + formatedDate[1] + '-' + formatedDate[0]
                 document.getElementById('message').innerText = mail_data?.message
-            } else location.href = 'inbox.php'
+            } else location.href = history.go(-1)
         }
     </script>
     <!-- insideBottom links -->

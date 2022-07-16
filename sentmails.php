@@ -30,8 +30,8 @@ $user = $_SESSION['email'];
                     <thead>
                         <tr>
                             <th style="width: 50px;"></th>
-                            <th style="max-width: calc(100vw - 700px);">Message</th>
                             <th>To</th>
+                            <th style="max-width: calc(100vw - 800px);">Message</th>
                             <th>Time</th>
                         </tr>
                     </thead>
@@ -40,16 +40,23 @@ $user = $_SESSION['email'];
                         $sql = "Select * from mail where MailBox='sent' and owner='$user' order by dttime desc";
                         $res = mysqli_query($conn, $sql);
                         while ($row = mysqli_fetch_assoc($res)) {
-                            $formatedDateArray =  preg_split("/\-/", $row['dttime']);
+                            $dateAndTimeArray =  preg_split("/\ /", $row['dttime']);
+                            $formatedDateArray =  preg_split("/\-/", $dateAndTimeArray[0]);
                             $formatedDate = "$formatedDateArray[2]-$formatedDateArray[1]-$formatedDateArray[0]";
+                            $formatedTimeArray =  preg_split("/\:/", $dateAndTimeArray[1]);
+                            $formatedTime = "";
+                            if ((int) $formatedTimeArray[0] > 12) {
+                                $actualValue = (int) $formatedTimeArray[0] - 12;
+                                $formatedTime = "$actualValue:$formatedTimeArray[1] pm";
+                            } else  $formatedTime = "$formatedTimeArray[0]:$formatedTimeArray[1] am";
                             $json_encodeValue = json_encode($row);
                             // echo "<script>mail_data = $json_encodeValue; console.log('" . json_encode($row) . "');</script>";
                             echo "<tr  onclick='redirectToMailBox($json_encodeValue);'  style='border-top:5px solid rgb(247, 245, 255);' >
                                     <td> <i class='fa fa-star-o' aria-hidden='true'></i> </td>
+                                    <td>$row[receiver]</td>
                                     <td style='max-width: calc(100vw - 700px);  white-space: nowrap;
                                     overflow: hidden;text-overflow: ellipsis;' ><b>$row[sub]&nbsp;&nbsp;-&nbsp;&nbsp;</b>$row[message]</td>
-                                    <td>$row[receiver]</td>
-                                    <td>$formatedDate</td>
+                                    <td>$formatedTime<br />$formatedDate</td>
                                  </tr>";
                         }
                         ?>
