@@ -1203,4 +1203,39 @@ nav.sticky {
     left: -250px;
   }
 }
+
+.rowHoverEffect:hover .editOption span {
+  display: block;
+}
+
+.editOption {
+  position: relative;
+}
+
+.editOption span {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: inline-block;
+  width: 100%;
+  background: #6d4aff;
+  background: -webkit-gradient(linear, right top, left top, color-stop(11%, #6d4aff), to(white));
+  background: linear-gradient(270deg, #6d4aff 11%, white 100%);
+  padding: 20px;
+  display: none;
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+}
+
+.editOption span i {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  -webkit-transform: translateX(-50%) translateY(50%);
+          transform: translateX(-50%) translateY(50%);
+  font-size: 20px;
+  color: white;
+}
 /*# sourceMappingURL=style.css.map */

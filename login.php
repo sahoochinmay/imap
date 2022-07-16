@@ -53,6 +53,7 @@ if (isset($_POST['signup'])) {
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/styles.css" />
   <title>Sign in & Sign up Form</title>
+  <link rel="icon" type="image/svg" href="./assets/images/download.svg">
 </head>
 
 <body>
