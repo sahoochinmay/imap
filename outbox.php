@@ -12,7 +12,7 @@ $user = $_SESSION['email'];
 <head>
     <!-- Header links -->
     <?php include "./includes/headerlinks.php" ?>
-    <title>Trash Mails - iMail</title>
+    <title>Outbox Mails - iMail</title>
 </head>
 
 <body>
@@ -72,13 +72,13 @@ $user = $_SESSION['email'];
             localStorage.setItem('mail_data', JSON.stringify(value));
             location.href = 'mailbox.php'
         }
-        function restoreMail(mid)
-        {
+
+        function restoreMail(mid) {
             console.log(mid)
             location.href = `./actions/restoreMail.php?mid=${mid}`
         }
-        function sendToTrash(mid)
-        {
+
+        function sendToTrash(mid) {
             console.log(mid)
             location.href = `./actions/sendToTrash.php?mid=${mid}&type=trash`
         }

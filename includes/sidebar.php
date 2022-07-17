@@ -3,7 +3,7 @@
     <ul>
         <li id="inbox"><a id="inbox_a" href="inbox.php"> <i class="fa fa-envelope" aria-hidden="true"></i> Inbox</a></li>
         <li id="sent"><a id="sent_a" href="sentmails.php"> <i class="fa fa-paper-plane" aria-hidden="true"></i> Sent</a></li>
-        <li><a href="#"> <i class="fa fa-inbox" aria-hidden="true"></i> Outbox</a></li>
+        <li id="outbox"><a id="outbox_a" href="outbox.php"> <i class="fa fa-inbox" aria-hidden="true"></i> Outbox</a></li>
         <li id="draft"><a id="draft_a" href="drafts.php"><i class="fa fa-file" aria-hidden="true"></i> Drafts</a></li>
         <li id="star"><a id="star_a" href="star.php"><i class="fa fa-star" aria-hidden="true"></i> Important</a></li>
         <li><a href="#"> <i class="fa fa-archive" aria-hidden="true"></i> Archieve</a></li>
@@ -69,6 +69,9 @@
         } else if (window.location?.pathname?.includes('trash.php')) {
             document.getElementById('trash').style = "background-color:#6d4aff;";
             document.getElementById('trash_a').style = "color:white;"
+        } else if (window.location?.pathname?.includes('outbox.php')) {
+            document.getElementById('outbox').style = "background-color:#6d4aff;";
+            document.getElementById('outbox_a').style = "color:white;"
         }
 
     }
