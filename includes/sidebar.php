@@ -7,7 +7,7 @@
         <li id="draft"><a id="draft_a" href="drafts.php"><i class="fa fa-file" aria-hidden="true"></i> Drafts</a></li>
         <li id="star"><a id="star_a" href="star.php"><i class="fa fa-star" aria-hidden="true"></i> Important</a></li>
         <li><a href="#"> <i class="fa fa-archive" aria-hidden="true"></i> Archieve</a></li>
-        <li><a href="#"> <i class="fa fa-trash" aria-hidden="true"></i> Trash</a></li>
+        <li id="trash"><a href="trash.php" id="trash_a"> <i class="fa fa-trash" aria-hidden="true"></i> Trash</a></li>
     </ul>
     <div class="logout">
         <button onclick="window.location.href='./actions/logout.php'" id="primaryBtn">
@@ -66,6 +66,9 @@
         } else if (window.location?.pathname?.includes('drafts.php')) {
             document.getElementById('draft').style = "background-color:#6d4aff;";
             document.getElementById('draft_a').style = "color:white;"
+        } else if (window.location?.pathname?.includes('trash.php')) {
+            document.getElementById('trash').style = "background-color:#6d4aff;";
+            document.getElementById('trash_a').style = "color:white;"
         }
 
     }
