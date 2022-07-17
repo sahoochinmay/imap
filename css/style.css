@@ -1206,6 +1206,18 @@ nav.sticky {
 
 .rowHoverEffect:hover .editOption span {
   display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .editOption {
@@ -1223,7 +1235,6 @@ nav.sticky {
   background-color: #ddcfcf;
   background: -webkit-gradient(linear, right top, left top, color-stop(11%, #b6b5b5), to(white));
   background: linear-gradient(270deg, #b6b5b5 11%, white 100%);
-  padding-top: 20px;
   height: 100%;
   display: none;
   -webkit-transition: 0.2s linear all;
@@ -1232,7 +1243,7 @@ nav.sticky {
 
 .editOption span i {
   float: right;
-  margin: 0 15px 0 5px;
+  margin-right: 20px;
   font-size: 17px;
 }
 /*# sourceMappingURL=style.css.map */

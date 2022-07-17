@@ -1189,6 +1189,10 @@ nav.sticky {
 .rowHoverEffect {
   &:hover .editOption span {
     display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
   }
 }
 
@@ -1214,14 +1218,15 @@ nav.sticky {
       rgb(182, 181, 181) 11%,
       rgba(255, 255, 255, 1) 100%
     );
-    padding-top: 20px;
+    // padding-top: 20px;
     height:100%;
     display: none;
     transition: 0.2s linear all;
 
     i {
       float: right;
-      margin: 0 15px 0 5px;
+      margin-right: 25px;
+      // margin: 0 20px 0 5px;
       // position: absolute;
       // left: 50%;
       // bottom: 50%;

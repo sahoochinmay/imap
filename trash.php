@@ -52,13 +52,13 @@ $user = $_SESSION['email'];
                             } else  $formatedTime = "$formatedTimeArray[0]:$formatedTimeArray[1] am";
                             $json_encodeValue = json_encode($row);
                             // echo "<script>mail_data = $json_encodeValue; console.log('" . json_encode($row) . "');</script>";
-                            echo "<tr  onclick='redirectToMailBox($json_encodeValue);'  style='border-top:5px solid rgb(247, 245, 255);' >
+                            echo "<tr  class='rowHoverEffect'  onclick='redirectToMailBox($json_encodeValue);'  style='border-top:5px solid rgb(247, 245, 255);' >
                                     <td><p style='color:red;margin-top:10px;' ><i class='fa fa-trash' aria-hidden='true'></i> Deleted</p></td>
                                     <td style='max-width: calc(100vw - 1000px);  white-space: nowrap;
                                     overflow: hidden;text-overflow: ellipsis;' ><b>$row[sub]&nbsp;&nbsp;-&nbsp;&nbsp;</b>$row[message]</td>
                                     <td>$row[sender]</td>
                                     <td>$row[receiver]</td>
-                                    <td>$formatedTime<br />$formatedDate</td>
+                                    <td class='editOption'><span onclick='event.stopPropagation();'><i onclick='restoreMail($row[mid]);' title='restore' class='fa fa-repeat' aria-hidden='true'></i></span>$formatedTime<br />$formatedDate</td>
                                  </tr>";
                         }
                         ?>
@@ -71,6 +71,11 @@ $user = $_SESSION['email'];
         function redirectToMailBox(value) {
             localStorage.setItem('mail_data', JSON.stringify(value));
             location.href = 'mailbox.php'
+        }
+        function restoreMail(mid)
+        {
+            console.log(mid)
+            location.href = `./actions/restoreMail.php?mid=${mid}`
         }
     </script>
     <!-- insideBottom links -->
