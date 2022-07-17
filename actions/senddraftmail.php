@@ -28,6 +28,8 @@ if (isset($_POST['to'])) {
                 $sql = "Insert Into mail Values(NULL,'$sender','$receiver',now(),'$sub','inbox',0,'$msg','$receiver','$attachment')";
                 mysqli_query($conn, $sql);
                 echo "<br/>Mail Sent";
+                $sql2 = "DELETE FROM draft WHERE mid='$_POST[mid]'";
+                mysqli_query($conn, $sql2);
             }
         } else {
             echo "<script>alert('Unable to send Mail');</script>";
