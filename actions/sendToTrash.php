@@ -15,6 +15,13 @@ if ($_GET['mid']) {
         }
         header("Location:../inbox.php");
         exit;
+    } else 
+    if ($_GET['type'] == "trash") {
+        // $sql = "Select * from mail Where mid=$_GET[mid]";
+        $sql = "DELETE FROM trash WHERE mid='$_GET[mid]'";
+        $res = mysqli_query($conn, $sql);
+        header("Location:../trash.php");
+        exit;
     } else {
         header("Location:../inbox.php");
         exit;

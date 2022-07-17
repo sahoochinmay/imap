@@ -58,7 +58,7 @@ $user = $_SESSION['email'];
                                     overflow: hidden;text-overflow: ellipsis;' ><b>$row[sub]&nbsp;&nbsp;-&nbsp;&nbsp;</b>$row[message]</td>
                                     <td>$row[sender]</td>
                                     <td>$row[receiver]</td>
-                                    <td class='editOption'><span onclick='event.stopPropagation();'><i onclick='restoreMail($row[mid]);' title='restore' class='fa fa-repeat' aria-hidden='true'></i></span>$formatedTime<br />$formatedDate</td>
+                                    <td class='editOption'><span onclick='event.stopPropagation();'><i onclick='restoreMail($row[mid]);' title='restore' class='fa fa-repeat' aria-hidden='true'></i><i title='Permanent Delete' onclick='sendToTrash($row[mid]);' class='fa fa-trash' aria-hidden='true'></i></span>$formatedTime<br />$formatedDate</td>
                                  </tr>";
                         }
                         ?>
@@ -76,6 +76,11 @@ $user = $_SESSION['email'];
         {
             console.log(mid)
             location.href = `./actions/restoreMail.php?mid=${mid}`
+        }
+        function sendToTrash(mid)
+        {
+            console.log(mid)
+            location.href = `./actions/sendToTrash.php?mid=${mid}&type=trash`
         }
     </script>
     <!-- insideBottom links -->
