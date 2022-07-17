@@ -2,11 +2,12 @@
     <button id="modal_open_btn" type="button"> <i class="fa fa-plus" aria-hidden="true"></i> New Message</button>
     <ul>
         <li id="inbox"><a id="inbox_a" href="inbox.php"> <i class="fa fa-envelope" aria-hidden="true"></i> Inbox</a></li>
-        <li id="draft"><a id="draft_a" href="drafts.php"> <i class="fa fa-envelope" aria-hidden="true"></i> Drafts</a></li>
-        <li><a href="#"> <i class="fa fa-inbox" aria-hidden="true"></i> Outbox</a></li>
         <li id="sent"><a id="sent_a" href="sentmails.php"> <i class="fa fa-paper-plane" aria-hidden="true"></i> Sent</a></li>
-        <li><a href="#"> <i class="fa fa-trash" aria-hidden="true"></i> Trash</a></li>
+        <li><a href="#"> <i class="fa fa-inbox" aria-hidden="true"></i> Outbox</a></li>
+        <li id="draft"><a id="draft_a" href="drafts.php"><i class="fa fa-file" aria-hidden="true"></i> Drafts</a></li>
+        <li id="star"><a id="star_a" href="star.php"><i class="fa fa-star" aria-hidden="true"></i> Important</a></li>
         <li><a href="#"> <i class="fa fa-archive" aria-hidden="true"></i> Archieve</a></li>
+        <li><a href="#"> <i class="fa fa-trash" aria-hidden="true"></i> Trash</a></li>
     </ul>
     <div class="logout">
         <button onclick="window.location.href='./actions/logout.php'" id="primaryBtn">
@@ -25,7 +26,7 @@
         <form action="./actions/sendmail.php" method="post" enctype="multipart/form-data">
             <div>
                 <label>To</label><br>
-                <input name="to" id="to"  required="" class="input_text w3-input w3-border w3-hover-shadow w3-margin-bottom" type="email" value="">
+                <input name="to" id="to" required="" class="input_text w3-input w3-border w3-hover-shadow w3-margin-bottom" type="email" value="">
             </div>
 
             <div>
@@ -41,7 +42,7 @@
                 <!-- <input type="hidden" value="" name="attach" id="attach"> -->
                 <!-- <input type="file" name="attachment"> -->
                 <!-- <br> -->
-                <a class="w3-btn w3-red" href="#" id="modal_close_btn" >Cancel</a>
+                <a class="w3-btn w3-red" href="#" id="modal_close_btn">Cancel</a>
 
                 <div class="rightSec">
                     <input class="saveMail" type="submit" name="btnSave" value="Save Mail" class="w3-btn w3-right w3-green">

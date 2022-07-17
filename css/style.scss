@@ -1202,23 +1202,32 @@ nav.sticky {
     transform: translateY(-50%);
     display: inline-block;
     width: 100%;
-    background: rgb(109, 74, 255);
-    background: linear-gradient(
+    // background: rgb(109, 74, 255);
+    // background: linear-gradient(
+    //   270deg,
+    //   rgba(109, 74, 255, 1) 11%,
+    //   rgba(255, 255, 255, 1) 100%
+    // );
+    background-color: rgb(221, 207, 207);
+        background: linear-gradient(
       270deg,
-      rgba(109, 74, 255, 1) 11%,
+      rgb(182, 181, 181) 11%,
       rgba(255, 255, 255, 1) 100%
     );
-    padding: 20px;
+    padding-top: 20px;
+    height:100%;
     display: none;
     transition: 0.2s linear all;
 
     i {
-      position: absolute;
-      left: 50%;
-      bottom: 50%;
-      transform: translateX(-50%) translateY(50%);
-      font-size: 20px;
-      color: white;
+      float: right;
+      margin: 0 15px 0 5px;
+      // position: absolute;
+      // left: 50%;
+      // bottom: 50%;
+      // transform: translateX(-50%) translateY(50%);
+      font-size: 17px;
+      // color: white;
     }
   }
 }

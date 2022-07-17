@@ -56,7 +56,7 @@ $user = $_SESSION['email'];
                                     <td style='max-width: calc(100vw - 700px);  white-space: nowrap;
                                     overflow: hidden;text-overflow: ellipsis;' ><b>$row[sub]&nbsp;&nbsp;-&nbsp;&nbsp;</b>$row[message]</td>
                                     <td>$row[sender]</td>
-                                    <td class='editOption'> <span> <i class='fa fa-trash' aria-hidden='true'></i></span>  $formatedTime<br />$formatedDate</td>
+                                    <td class='editOption'><span><i class='fa fa-trash' aria-hidden='true'></i><i class='fa fa-archive' aria-hidden='true'></i></span>  $formatedTime<br />$formatedDate</td>
                                  </tr>";
                         }
                         ?>
