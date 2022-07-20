@@ -38,6 +38,11 @@
   opacity: 0.9;
 }
 
+.page_container {
+  height: calc(100vh - 100px);
+  overflow: auto;
+}
+
 /* The Modal (background) */
 .modal {
   display: none;

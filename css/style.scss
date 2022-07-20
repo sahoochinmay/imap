@@ -43,6 +43,10 @@ $whiteShade: #faf9f6;
     opacity: 0.9;
   }
 }
+.page_container{
+  height: calc(100vh - 100px);
+  overflow: auto;
+}
 // modal ///
 /* The Modal (background) */
 .modal {
@@ -1240,6 +1244,7 @@ nav.sticky {
 .profile_container {
   padding: 0 50px;
   width: 100%;
+
   .profile_img_cont {
     display: flex;
     justify-content: center;

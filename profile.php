@@ -24,7 +24,7 @@ $user = $_SESSION['email'];
     <main class="mailbox_main">
         <!-- Inside Nav -->
         <?php include "./includes/sidebar.php" ?>
-        <div class="profile_container">
+        <div class="profile_container page_container">
             <div class="profile_img_cont">
                 <div class="profile_Pic">
                     <input type="file" accept="image/*" id="profile_image_input_field" onchange="loadFile(event,'profile_img_id')">
