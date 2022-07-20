@@ -1237,115 +1237,112 @@ nav.sticky {
   }
 }
 //////PROFILE SECTION////////
-
-.contentWrapper {
+.profile_container {
+  padding: 0 50px;
   width: 100%;
-  min-height: 100vh;
-  height: auto;
-  background: $bgColor;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .contentsHolder {
-    background: $bgColor;
-    width: 100%;
+  .profile_img_cont {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 30px 40px;
-
-    .profilePic {
-      display: flex;
-      justify-content: center;
-
-      img {
-        width: 40%;
-        text-align: center;
+    .profile_Pic {
+      position: relative;
+      label {
+        position: absolute;
+        bottom: -10px;
+        right: -5px;
+        background: var(--default-bg-1);
+        border-radius: 50%;
+        padding: 3px 5px;
+      }
+      .profile_img {
+        width: 91px;
+        height: 91px;
+        border-radius: 50%;
+        z-index: 1;
+        border: 2px solid $color1;
+        margin-top: 30px;
       }
     }
-
-    .personalDetails {
-      position: relative;
-      padding: 40px 30px;
-      margin: 30px 0;
-      width: 80%;
-      background: $color1;
-      border-radius: 10px;
-
-      form {
-        padding: 30px 20px;
-        padding-bottom: 50px;
-        background: $textColor;
+    #profile_image_input_field {
+      display: none;
+    }
+  }
+  .personalDetails {
+    position: relative;
+    padding: 30px;
+    margin: 30px 0;
+    width: 100%;
+    background: $whiteShade;
+    border-radius: 10px;
+    form {
+      input {
+        width: 45%;
+        margin-bottom: 15px;
+        padding: 8px 15px;
         border-radius: 10px;
-
-        border-radius: 50px;
-        background: linear-gradient(145deg, #6243e6, #754fff);
-        box-shadow: 20px 20px 30px #5d3fd9, -20px -20px 30px #7d55ff;
-
-        input {
-          width: 48%;
-          margin-bottom: 15px;
-          padding: 8px 15px;
+        border: none;
+      }
+      .btn_Container {
+        display: flex;
+        justify-content: center;
+        button {
+          padding: 6px 12px;
+          background: $color1;
+          border: 1px solid $color1;
           border-radius: 10px;
-          border: none;
-        }
-
-        button {
-          padding: 6px 14px;
+          color: white;
+          transition: 0.2s linear all;
+          text-decoration: none;
           display: inline-block;
-          min-width: 20%;
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
+
+          &:hover {
+            background: $color1;
+            opacity: 0.9;
+          }
         }
       }
     }
-
-    .passwordReset {
-      position: relative;
-      padding: 40px 30px;
-      margin: 30px 0;
-      width: 80%;
-      background: $color1;
-      border-radius: 10px;
-
-      h3 {
-        margin-left: 20px;
-        margin-bottom: 20px;
+  }
+  .passwordReset {
+    position: relative;
+    padding: 30px;
+    margin: 30px 0;
+    width: 100%;
+    background: $whiteShade;
+    border-radius: 10px;
+    h3 {
+      margin-left: 20px;
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    form {
+      label {
+        color: white;
       }
-
-      form {
+      input {
         width: 100%;
-        padding: 30px 20px;
-        padding-bottom: 50px;
-        background: $textColor;
+        margin-bottom: 15px;
+        padding: 6px 15px;
         border-radius: 10px;
-
-        background: linear-gradient(145deg, #6243e6, #754fff);
-        box-shadow: 20px 20px 30px #5d3fd9, -20px -20px 30px #7d55ff;
-
-        label {
-          color: white;
-        }
-
-        input {
-          width: 100%;
-          margin-bottom: 15px;
-          padding: 6px 15px;
-          border-radius: 15px;
-          border: none;
-          margin-top: 4px;
-        }
-
+        border: none;
+        margin-top: 4px;
+      }
+      .btn_Container {
+        display: flex;
+        justify-content: center;
         button {
-          padding: 6px 14px;
+          padding: 6px 12px;
+          background: $color1;
+          border: 1px solid $color1;
+          border-radius: 10px;
+          color: white;
+          transition: 0.2s linear all;
+          text-decoration: none;
           display: inline-block;
-          min-width: 20%;
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
+
+          &:hover {
+            background: $color1;
+            opacity: 0.9;
+          }
         }
       }
     }

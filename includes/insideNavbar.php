@@ -6,7 +6,7 @@
     <div>
         <div class="d-flex  justify-content-end  align-items-center flex-row">
             <h5 style="margin-right: 10px;margin-top: 5px;">Welcome, Chinmay</h5>
-            <img src="./assets/profile.png" class="rounded-circle" alt="Avatar" style="height: 35px;" />
+            <img  onclick="location.href = 'profile.php'" src="./assets/profile.png" class="rounded-circle" alt="Avatar" style="height: 35px;cursor:pointer;" />
         </div>
     </div>
 </nav>

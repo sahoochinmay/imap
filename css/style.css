@@ -1247,42 +1247,12 @@ nav.sticky {
   font-size: 17px;
 }
 
-.contentWrapper {
+.profile_container {
+  padding: 0 50px;
   width: 100%;
-  min-height: 100vh;
-  height: auto;
-  background: #f7f5ff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-.contentWrapper .contentsHolder {
-  background: #f7f5ff;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 30px 40px;
-}
-
-.contentWrapper .contentsHolder .profilePic {
+.profile_container .profile_img_cont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1291,94 +1261,126 @@ nav.sticky {
           justify-content: center;
 }
 
-.contentWrapper .contentsHolder .profilePic img {
-  width: 40%;
-  text-align: center;
-}
-
-.contentWrapper .contentsHolder .personalDetails {
+.profile_container .profile_img_cont .profile_Pic {
   position: relative;
-  padding: 40px 30px;
+}
+
+.profile_container .profile_img_cont .profile_Pic label {
+  position: absolute;
+  bottom: -10px;
+  right: -5px;
+  background: var(--default-bg-1);
+  border-radius: 50%;
+  padding: 3px 5px;
+}
+
+.profile_container .profile_img_cont .profile_Pic .profile_img {
+  width: 91px;
+  height: 91px;
+  border-radius: 50%;
+  z-index: 1;
+  border: 2px solid #6d4aff;
+  margin-top: 30px;
+}
+
+.profile_container .profile_img_cont #profile_image_input_field {
+  display: none;
+}
+
+.profile_container .personalDetails {
+  position: relative;
+  padding: 30px;
   margin: 30px 0;
-  width: 80%;
-  background: #6d4aff;
+  width: 100%;
+  background: #faf9f6;
   border-radius: 10px;
 }
 
-.contentWrapper .contentsHolder .personalDetails form {
-  padding: 30px 20px;
-  padding-bottom: 50px;
-  background: #372580;
-  border-radius: 10px;
-  border-radius: 50px;
-  background: linear-gradient(145deg, #6243e6, #754fff);
-  -webkit-box-shadow: 20px 20px 30px #5d3fd9, -20px -20px 30px #7d55ff;
-          box-shadow: 20px 20px 30px #5d3fd9, -20px -20px 30px #7d55ff;
-}
-
-.contentWrapper .contentsHolder .personalDetails form input {
-  width: 48%;
+.profile_container .personalDetails form input {
+  width: 45%;
   margin-bottom: 15px;
   padding: 8px 15px;
   border-radius: 10px;
   border: none;
 }
 
-.contentWrapper .contentsHolder .personalDetails form button {
-  padding: 6px 14px;
-  display: inline-block;
-  min-width: 20%;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+.profile_container .personalDetails form .btn_Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.contentWrapper .contentsHolder .passwordReset {
-  position: relative;
-  padding: 40px 30px;
-  margin: 30px 0;
-  width: 80%;
+.profile_container .personalDetails form .btn_Container button {
+  padding: 6px 12px;
   background: #6d4aff;
+  border: 1px solid #6d4aff;
+  border-radius: 10px;
+  color: white;
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.profile_container .personalDetails form .btn_Container button:hover {
+  background: #6d4aff;
+  opacity: 0.9;
+}
+
+.profile_container .passwordReset {
+  position: relative;
+  padding: 30px;
+  margin: 30px 0;
+  width: 100%;
+  background: #faf9f6;
   border-radius: 10px;
 }
 
-.contentWrapper .contentsHolder .passwordReset h3 {
+.profile_container .passwordReset h3 {
   margin-left: 20px;
   margin-bottom: 20px;
+  font-size: 15px;
 }
 
-.contentWrapper .contentsHolder .passwordReset form {
-  width: 100%;
-  padding: 30px 20px;
-  padding-bottom: 50px;
-  background: #372580;
-  border-radius: 10px;
-  background: linear-gradient(145deg, #6243e6, #754fff);
-  -webkit-box-shadow: 20px 20px 30px #5d3fd9, -20px -20px 30px #7d55ff;
-          box-shadow: 20px 20px 30px #5d3fd9, -20px -20px 30px #7d55ff;
-}
-
-.contentWrapper .contentsHolder .passwordReset form label {
+.profile_container .passwordReset form label {
   color: white;
 }
 
-.contentWrapper .contentsHolder .passwordReset form input {
+.profile_container .passwordReset form input {
   width: 100%;
   margin-bottom: 15px;
   padding: 6px 15px;
-  border-radius: 15px;
+  border-radius: 10px;
   border: none;
   margin-top: 4px;
 }
 
-.contentWrapper .contentsHolder .passwordReset form button {
-  padding: 6px 14px;
+.profile_container .passwordReset form .btn_Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profile_container .passwordReset form .btn_Container button {
+  padding: 6px 12px;
+  background: #6d4aff;
+  border: 1px solid #6d4aff;
+  border-radius: 10px;
+  color: white;
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+  text-decoration: none;
   display: inline-block;
-  min-width: 20%;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+}
+
+.profile_container .passwordReset form .btn_Container button:hover {
+  background: #6d4aff;
+  opacity: 0.9;
 }
 /*# sourceMappingURL=style.css.map */
