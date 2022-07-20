@@ -14,30 +14,23 @@ if (isset($_POST['to'])) {
 	$target = $_POST['target'];
 
 	if (isset($_POST['btnSend'])) {
-		echo "<p>Sending Mail</p>";
-		if (true) {
+		$sql = "Insert Into mail Values(NULL,'$sender','$receiver',now(),'$sub','sent',1,'$msg','$sender','$attachment')";
+		if (mysqli_query($conn, $sql)) {
 			$sql = "Select id from UserDetails Where ID='$receiver'";
 			$res = mysqli_query($conn, $sql);
 			$n = mysqli_num_rows($res);
 			if ($n == 0) {
-				$sql1 = "Insert Into outbox_mails Values(NULL,'$sender','$receiver',now(),'$sub','sent',1,'$msg','$sender','$attachment')";
-				 mysqli_query($conn, $sql1);
-				// print_r($res1);
-				echo '<br/>Receipent Address Not Found';
+				$sql = "Insert Into mail Values(NULL,'admin@imail.com','$sender',now(),'Mail Sent Fail','inbox',1,'Unable to Send Mail due to Invlid Receipent <b>$receiver</b>: $sub -> $msg','$sender','')";
+				mysqli_query($conn, $sql);
 			} else {
-				$sql3 = "Insert Into mail Values(NULL,'$sender','$receiver',now(),'$sub','sent',1,'$msg','$sender','$attachment')";
-				mysqli_query($conn, $sql3);
-				$sql2 = "Insert Into mail Values(NULL,'$sender','$receiver',now(),'$sub','inbox',0,'$msg','$receiver','$attachment')";
-				mysqli_query($conn, $sql2);
-				echo "<br/>Mail Sent";
-				header("Location:../sentmails.php");
-				exit;
+				$sql = "Insert Into mail Values(NULL,'$sender','$receiver',now(),'$sub','inbox',0,'$msg','$receiver','$attachment')";
+				mysqli_query($conn, $sql);
 			}
 		} else {
 			echo "<script>alert('Unable to send Mail');</script>";
 		}
-		// header("Location:../sentmails.php");
-		// exit;
+		header("Location:../sentmails.php");
+		exit;
 	}
 	if (isset($_POST['btnSave'])) {
 		echo "<br/>Saving Mail";
