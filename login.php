@@ -8,17 +8,17 @@ if (isLoggedin()) {
 if (isset($_POST['login'])) {
   $email = $_POST['email'];
   $pwd = $_POST['pwd'];
-  echo $email;
-  if($email == "")
-  {
-    echo '<script>alert("Invalid Id or Password gg");</script>';
+  if ($email == "" || $pwd == "") {
+    echo '<script>alert("Please enter email and password");location.href="login.php"</script>';
+    exit();
   }
   $sql = "Select * from userdetails where id='$email' and password='$pwd'";
   $res = mysqli_query($conn, $sql);
   $n = mysqli_num_rows($res);
 
   if ($n == 0) {
-    echo '<script>alert("Invalid Id or Password");</script>';
+    echo '<script>alert("Invalid Id or Password");location.href="login.php"</script>';
+    exit();
   } else {
     $row = mysqli_fetch_assoc($res);
     $_SESSION['email'] = $email;
@@ -36,6 +36,10 @@ if (isset($_POST['signup'])) {
   $phone = $_POST['phone'];
   $email = $_POST['email'];
   $pwd = $_POST['pwd1'];
+  if ($email == "" || $pwd == "" || $name == "" || $phone == "") {
+    echo '<script>alert("Please enter all fields.");location.href="login.php"</script>';
+    exit();
+  }
   $sql = "INSERT INTO `userdetails` (`id`, `name`, `phone`, `password`, `photo`) VALUES ('$email', '$name', '$phone', '$pwd','avatars/avatar.png')";
   if (mysqli_query($conn, $sql)) {
     header("Location:index.php");
@@ -148,4 +152,5 @@ if (isset($_POST['signup'])) {
   </script>
 </body>
 <?php include './includes/bottomJsLinks.php'; ?>
+
 </html>
