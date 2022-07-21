@@ -15,7 +15,7 @@ $user = $_SESSION['email'];
     <title>Profile - iMail</title>
 
     <link rel="stylesheet" href="css/style.css">
-    
+
 </head>
 
 <body>
@@ -33,7 +33,7 @@ $user = $_SESSION['email'];
                 </div>
             </div>
             <div class="personalDetails">
-                <form method="post" enctype="multipart/form-data" action="./actions/updateProfile.php" >
+                <form method="post" enctype="multipart/form-data" action="./actions/updateProfile.php">
                     <input type="text" name="name" id="name" placeholder="Name">
                     <input type="text" name="phone" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="phone_number" placeholder="Phone Number">
                     <input type="email" name="" id="email" readonly placeholder="Email Id"> <br>
@@ -44,12 +44,12 @@ $user = $_SESSION['email'];
             </div>
             <div class="passwordReset">
                 <h3>Reset Password</h3>
-                <form action="">
+                <form method="post" enctype="multipart/form-data" action="./actions/updateProfile.php">
                     <input type="password" name="c_password" id="c_password" placeholder="Current Password"><br>
                     <input type="password" name="n_password" id="n_password" placeholder="New Password"><br>
                     <input type="password" name="r_password" id="r_password" placeholder="Re-enter Password"><br>
                     <div class="btn_Container">
-                        <button type="submit">Done</button>
+                        <button  name="btnReset" type="submit">Reset</button>
                     </div>
                 </form>
             </div>
@@ -75,6 +75,9 @@ $user = $_SESSION['email'];
     </script>
     <!-- insideBottom links -->
     <?php include "./includes/insideBottomLinks.php" ?>
+    <script>
+        checkAlert();
+    </script>
 </body>
 
 </html>

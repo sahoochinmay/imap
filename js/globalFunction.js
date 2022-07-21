@@ -65,3 +65,11 @@ modal_close_btn.onclick = function () {
 //     modal.style.display = "none";
 //   }
 // };
+// show alert
+function checkAlert() {
+  let alertData = localStorage.getItem("alert");
+  if (alertData) {
+    alert(alertData);
+    localStorage.removeItem("alert");
+  }
+}
