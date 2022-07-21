@@ -27,27 +27,21 @@ if (isset($_POST['to'])) {
 				mysqli_query($conn, $sql);
 			}
 		} else {
-			echo "<script>alert('Unable to send Mail');</script>";
+			echo "<script>localStorage.setItem('alert','Unable to send mail.');location.href='../inbox.php'</script>";
 		}
-		header("Location:../sentmails.php");
-		exit;
+		echo "<script>localStorage.setItem('alert','Mail sent successfully.');location.href='../sentmails.php'</script>";
 	}
 	if (isset($_POST['btnSave'])) {
 		echo "<br/>Saving Mail";
 		if (isset($_POST['mid'])) {
 			$sql = "Update draft Set Sender='$sender', Receiver='$receiver',DtTime=now(), Sub='$sub', message='$msg', Attachment='$attachment' Where Mid=$_POST[mid]";
 			mysqli_query($conn, $sql);
-			echo "<br/>Mail Saved";
 		} else {
 			$sql = "Insert Into draft Values(NULL,'$sender','$receiver',now(),'$sub','draft',1,'$msg','$sender','$attachment')";
 			mysqli_query($conn, $sql);
-			echo "<br/>Mail Saved";
-			header("Location:../drafts.php");
-			exit;
 		}
 	}
-	// header("Location:../inbox.php");
-	// exit;
+	echo "<script>localStorage.setItem('alert','Mail saved to draft.');location.href='../drafts.php'</script>";
 } else {
-	echo "<br/>Invalid Request";
+	echo "<script>localStorage.setItem('alert','Unable to saved to draft.');location.href='../drafts.php'</script>";
 }

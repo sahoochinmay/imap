@@ -75,9 +75,6 @@ $user = $_SESSION['email'];
     </script>
     <!-- insideBottom links -->
     <?php include "./includes/insideBottomLinks.php" ?>
-    <script>
-        checkAlert();
-    </script>
 </body>
 
 </html>
