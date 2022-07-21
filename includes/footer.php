@@ -5,11 +5,7 @@
               <a href="#"> ©2022 iMail.&nbsp; All rights reserved</a>
           </div>
           <div class="links">
-              <ul>
-                  <li><a href="privacypolicy.html">Privacy Policy</a></li>
-                  <li><a href="about.html">About us</a></li>
-                  <li><a href="contact.html">Support</a></li>
-              </ul>
+              <p>Made with <span><i class="fa fa-heart" aria-hidden="true"></i></span> by Team SCRAP</p>
           </div>
       </div>
   </section>

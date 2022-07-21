@@ -11,14 +11,14 @@ $user = $_SESSION['email'];
 
 <head>
     <!-- Header links -->
-    <?php include "./includes/headerlinks.php" ?>
+    <?php include "includes/headerlinks.php" ?>
     <title>Profile - iMail</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    
 </head>
 
 <body>
-    <script>
-
-    </script>
     <!-- Inside Nav -->
     <?php include "./includes/insideNavbar.php" ?>
     <main class="mailbox_main">
@@ -33,21 +33,21 @@ $user = $_SESSION['email'];
                 </div>
             </div>
             <div class="personalDetails">
-                <form action="">
-                    <input type="text" name="" id="" placeholder="Name">
-                    <input type="text" name="" id="" placeholder="Phone Number">
-                    <input type="email" name="" id="" placeholder="Email Id"> <br>
+                <form method="post" enctype="multipart/form-data" action="./actions/updateProfile.php" >
+                    <input type="text" name="name" id="name" placeholder="Name">
+                    <input type="text" name="phone" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="phone_number" placeholder="Phone Number">
+                    <input type="email" name="" id="email" readonly placeholder="Email Id"> <br>
                     <div class="btn_Container">
-                        <button type="submit">Save</button>
+                        <button name="btnSave" type="submit">Save</button>
                     </div>
                 </form>
             </div>
             <div class="passwordReset">
                 <h3>Reset Password</h3>
                 <form action="">
-                    <input type="password" name="" id="" placeholder="Current Password"><br>
-                    <input type="password" name="" id="" placeholder="New Password"><br>
-                    <input type="password" name="" id="" placeholder="Re-enter Password"><br>
+                    <input type="password" name="c_password" id="c_password" placeholder="Current Password"><br>
+                    <input type="password" name="n_password" id="n_password" placeholder="New Password"><br>
+                    <input type="password" name="r_password" id="r_password" placeholder="Re-enter Password"><br>
                     <div class="btn_Container">
                         <button type="submit">Done</button>
                     </div>
@@ -55,6 +55,24 @@ $user = $_SESSION['email'];
             </div>
         </div>
     </main>
+    <?php
+    $sql = "Select * from userdetails where  id='$user'";
+    $res = mysqli_query($conn, $sql);
+    $data = json_encode(mysqli_fetch_assoc($res));
+    echo "    <script>
+    function displayProfileData(d) {
+        console.log(d)
+        document.getElementById('name').value = d?.name
+        document.getElementById('phone_number').value = d?.phone
+        document.getElementById('email').value = d?.id
+    
+    }
+    </script>";
+    echo "<script>displayProfileData($data);</script>";
+    ?>
+    <script>
+        document.getElementById('name')
+    </script>
     <!-- insideBottom links -->
     <?php include "./includes/insideBottomLinks.php" ?>
 </body>

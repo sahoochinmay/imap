@@ -24,7 +24,7 @@
       <div class="leftSec">
         <h3>With iMail, your data belongs to you, not tech companies, governments, or hackers.</h3>
         <p>Our encrypted services help you fight for a better internet that is secure and private by default.</p>
-        <a href="about.html" id="secondaryBtn">Know About Us</a>
+        <a href="about.php" id="secondaryBtn">Know About Us</a>
       </div>
       <div class="rightSec">
         <img src="assets/images/bg2.svg" alt="">
@@ -39,13 +39,10 @@
       </div>
       <div class="rightSec">
         <p>stay professional with <br> <span>email@imail.com</span> </p>
-        <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Voluptatibus impedit asperiores harum dolorem! Quia voluptatibus
-          officia assumenda dolores
-          perferendis suscipit enim exercitationem doloribus incidunt odio,
-          dolorem commodi ea quasi laudantium?
+        <small>Create your account with imail easily by using our domain
+          imail.com .
         </small><br>
-        <a href="signup.html">Get Your Mail Now <i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
+        <a href="login.php">Get Your Mail Now <i class="fa fa-arrow-right" aria-hidden="true"></i> </a>
       </div>
     </div>
   </section>
@@ -57,7 +54,7 @@
         <div class="extra">
           <h4>Need more help?</h4>
           <p>Browse tips and step-by-step guides made for both new users and power users.</p>
-          <a href="#">Help Center</a>
+          <a href="contact.php">Help Center</a>
         </div>
       </div>
       <div class="rightSec">
@@ -69,8 +66,7 @@
               </button>
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-                <code>.accordion-flush</code> class. This is the first item's accordion body.
+              <div class="accordion-body">We work hard to protect you from spam, phishing, and malware, before they reach your inbox.
               </div>
             </div>
           </div>
@@ -81,9 +77,7 @@
               </button>
             </h2>
             <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-                <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being
-                filled with some actual content.
+              <div class="accordion-body">No, your emails are private. iMail does not use your emails for advertising purposes.
               </div>
             </div>
           </div>
@@ -95,10 +89,7 @@
               </button>
             </h2>
             <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
-                <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting
-                happening here in terms of content, but just filling up the space to make it look, at least at first
-                glance, a bit more representative of how this would look in a real-world application.
+              <div class="accordion-body">Always double-check exactly who you're emailing.<br> Password-protect and encrypt confidential documents before sending.
               </div>
             </div>
           </div>
@@ -106,6 +97,107 @@
       </div>
     </div>
   </section>
+
+
+  <!----OUR TEAM SECTION----->
+  <section class="team">
+
+    <h2 style="text-align:center;">OUR TEAM</h2>
+    <div class="memberRow">
+
+      <div class="memberWrapper">
+        <div class="memberDetails">
+          <img src="assets/images/smruti.jpg" alt="" srcset="">
+
+          <h4>Smruti Sourav</h4>
+          <p>Frontend Design</p>
+
+          <div class="socials">
+
+            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="memberWrapper">
+        <div class="memberDetails">
+          <img src="assets/images/chinmay.jpg" alt="" srcset="">
+
+          <h4>Chinmay Ranjan</h4>
+          <p>Frontend Design</p>
+
+          <div class="socials">
+
+            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="memberWrapper">
+        <div class="memberDetails">
+          <img src="assets/images/rishi.jpg" alt="" srcset="">
+
+          <h4>Rishi Pratim</h4>
+          <p>Frontend Design</p>
+
+          <div class="socials">
+
+            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="memberWrapper">
+        <div class="memberDetails">
+          <img src="assets/images/asutosh.jpg" alt="" srcset="">
+
+          <h4>Asutosh</h4>
+          <p>Frontend Design</p>
+
+          <div class="socials">
+
+            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="memberWrapper">
+        <div class="memberDetails">
+          <img src="assets/images/piyush.jpg" alt="" srcset="">
+
+          <h4>Piyush Kumar</h4>
+          <p>Frontend Design</p>
+
+          <div class="socials">
+
+            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+
   <!-- Footer section -->
   <?php include "./includes/footer.php" ?>
   <!-- JS Links -->
