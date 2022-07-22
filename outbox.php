@@ -25,7 +25,9 @@ $user = $_SESSION['email'];
         <!-- Inside Nav -->
         <?php include "./includes/sidebar.php" ?>
         <div class="mailArea">
-            <h1>No mail availabel</h1>
+            <div style="display: flex;justify-content: center;">
+                <h1 style="margin-top:100px; font-size:20px;">No mail availabel</h1>
+            </div>
         </div>
     </main>
     <!-- insideBottom links -->
