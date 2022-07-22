@@ -12,7 +12,7 @@ $user = $_SESSION['email'];
 <head>
     <!-- Header links -->
     <?php include "./includes/headerlinks.php" ?>
-    <title>Sent Mails - iMail</title>
+    <title>Archive Mails - iMail</title>
 </head>
 
 <body>
@@ -29,15 +29,16 @@ $user = $_SESSION['email'];
                 <table class="customTable">
                     <thead>
                         <tr>
-                            <th style="width: 50px;"></th>
+                            <th style="width: 110px;"></th>
+                            <th style="max-width: calc(100vw - 1000px);">Message</th>
+                            <th>From</th>
                             <th>To</th>
-                            <th style="max-width: calc(100vw - 800px);">Message</th>
-                            <th>Time</th>
+                            <th style="width:100px;">Time</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        $sql = "Select * from mail where MailBox='sent' and owner='$user' order by dttime desc";
+                        $sql = "Select * from archive where owner='$user' order by dttime desc";
                         $res = mysqli_query($conn, $sql);
                         while ($row = mysqli_fetch_assoc($res)) {
                             $dateAndTimeArray =  preg_split("/\ /", $row['dttime']);
@@ -51,12 +52,13 @@ $user = $_SESSION['email'];
                             } else  $formatedTime = "$formatedTimeArray[0]:$formatedTimeArray[1] am";
                             $json_encodeValue = json_encode($row);
                             // echo "<script>mail_data = $json_encodeValue; console.log('" . json_encode($row) . "');</script>";
-                            echo "<tr class='rowHoverEffect'  onclick='redirectToMailBox($json_encodeValue);'  style='border-top:5px solid rgb(247, 245, 255);' >
-                                    <td> <i class='fa fa-star-o' aria-hidden='true'></i> </td>
-                                    <td>$row[receiver]</td>
-                                    <td style='max-width: calc(100vw - 700px);  white-space: nowrap;
+                            echo "<tr  class='rowHoverEffect'  onclick='redirectToMailBox($json_encodeValue);'  style='border-top:5px solid rgb(247, 245, 255);' >
+                                    <td><p style='color:blue;margin-top:10px;' ><i title='archive' class='fa fa-archive'  aria-hidden='true'></i> Archive</p></td>
+                                    <td style='max-width: calc(100vw - 1000px);  white-space: nowrap;
                                     overflow: hidden;text-overflow: ellipsis;' ><b>$row[sub]&nbsp;&nbsp;-&nbsp;&nbsp;</b>$row[message]</td>
-                                    <td class='editOption'><span onclick='event.stopPropagation();'><i title='archive' class='fa fa-archive' onclick='sendToArchive($row[mid]);'  aria-hidden='true'></i><i title='delete' onclick='sendToTrash($row[mid]);' class='fa fa-trash' aria-hidden='true'></i></span>  $formatedTime<br />$formatedDate</td>
+                                    <td>$row[sender]</td>
+                                    <td>$row[receiver]</td>
+                                    <td class='editOption'><span onclick='event.stopPropagation();'><i onclick='restoreMail($row[mid]);' title='restore' class='fa fa-repeat' aria-hidden='true'></i><i title='Permanent Delete' onclick='sendToTrash($row[mid]);' class='fa fa-trash' aria-hidden='true'></i></span>$formatedTime<br />$formatedDate</td>
                                  </tr>";
                         }
                         ?>
@@ -71,13 +73,10 @@ $user = $_SESSION['email'];
             location.href = 'mailbox.php'
         }
 
-        function sendToTrash(mid) {
+        function sendToTrash(mid)
+        {
             console.log(mid)
-            location.href = `./actions/sendToTrash.php?mid=${mid}&type=sentmails`
-        }
-
-        function sendToArchive(mid) {
-            location.href = `./actions/sendToArchive.php?mid=${mid}&type=sentmails`
+            location.href = `./actions/sendToTrash.php?mid=${mid}&type=archive`
         }
     </script>
     <!-- insideBottom links -->

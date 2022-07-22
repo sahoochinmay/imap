@@ -56,7 +56,7 @@ $user = $_SESSION['email'];
                                     <td style='max-width: calc(100vw - 700px);  white-space: nowrap;
                                     overflow: hidden;text-overflow: ellipsis;' ><b>$row[sub]&nbsp;&nbsp;-&nbsp;&nbsp;</b>$row[message]</td>
                                     <td>$row[sender]</td>
-                                    <td class='editOption'><span onclick='event.stopPropagation();'><i title='archive' class='fa fa-archive' aria-hidden='true'></i><i title='delete' onclick='sendToTrash($row[mid]);' class='fa fa-trash' aria-hidden='true'></i></span>  $formatedTime<br />$formatedDate</td>
+                                    <td class='editOption'><span onclick='event.stopPropagation();'><i title='archive' class='fa fa-archive' onclick='sendToArchive($row[mid]);'  aria-hidden='true'></i><i title='delete' onclick='sendToTrash($row[mid]);' class='fa fa-trash' aria-hidden='true'></i></span>  $formatedTime<br />$formatedDate</td>
                                  </tr>";
                         }
                         ?>
@@ -70,10 +70,14 @@ $user = $_SESSION['email'];
             localStorage.setItem('mail_data', JSON.stringify(value));
             location.href = 'mailbox.php'
         }
-        function sendToTrash(mid)
-        {
+
+        function sendToTrash(mid) {
             console.log(mid)
             location.href = `./actions/sendToTrash.php?mid=${mid}&type=inbox`
+        }
+
+        function sendToArchive(mid) {
+            location.href = `./actions/sendToArchive.php?mid=${mid}&type=inbox`
         }
     </script>
     <!-- insideBottom links -->

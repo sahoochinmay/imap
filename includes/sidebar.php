@@ -6,7 +6,7 @@
         <li id="outbox"><a id="outbox_a" href="outbox.php"> <i class="fa fa-inbox" aria-hidden="true"></i> Outbox</a></li>
         <li id="draft"><a id="draft_a" href="drafts.php"><i class="fa fa-file" aria-hidden="true"></i> Drafts</a></li>
         <li id="star"><a id="star_a" href="star.php"><i class="fa fa-star" aria-hidden="true"></i> Important</a></li>
-        <li><a href="#"> <i class="fa fa-archive" aria-hidden="true"></i> Archieve</a></li>
+        <li id="archive"><a href="archive.php" id="archive_a"> <i class="fa fa-archive" aria-hidden="true"></i>Archive</a></li>
         <li id="trash"><a href="trash.php" id="trash_a"> <i class="fa fa-trash" aria-hidden="true"></i> Trash</a></li>
     </ul>
     <div class="logout">
@@ -72,6 +72,9 @@
         } else if (window.location?.pathname?.includes('outbox.php')) {
             document.getElementById('outbox').style = "background-color:#6d4aff;";
             document.getElementById('outbox_a').style = "color:white;"
+        } else if (window.location?.pathname?.includes('archive.php')) {
+            document.getElementById('archive').style = "background-color:#6d4aff;";
+            document.getElementById('archive_a').style = "color:white;"
         }
 
     }
