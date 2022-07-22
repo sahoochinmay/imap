@@ -5,6 +5,29 @@
   <!-- Header links -->
   <?php include "./includes/headerlinks.php" ?>
   <title>Support - iMail</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init('LDOLMI-WmUO8Fqz0x');
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function() {
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // generate a five digit number for the contact_number variable
+        // this.contact_number.value = Math.random() * 100000 | 0;
+        // these IDs from the previous steps
+        emailjs.sendForm('service_7hsitlc', 'template_f3wl15v', this)
+          .then(function() {
+            alert("Message sent successfully")
+          }, function(error) {
+            alert("Error occurs please try after some time.")
+          });
+      });
+    }
+  </script>
 </head>
 
 <body>
@@ -13,14 +36,15 @@
   <div class="contactPage">
     <h2>How can we help You ?</h2>
     <div class="rowWrapper">
-      <form action="">
-        <label for="topic">Topic</label><br>
-        <input type="text" name="" id="topic" placeholder="Enter any topic here..." required>
+      <form action="" id="contact-form">
+        <input type="hidden" name="contact_number" value="9937159477">
+        <label for="topic">Name</label><br>
+        <input type="text" name="user_name" id="user_name" placeholder="Enter your name here..." required>
         <label for="email">Email Address</label><br>
-        <input type="email" name="" id="email" placeholder="Let us know where we can reach you" required>
+        <input type="email" name="user_email" id="user_email" placeholder="Let us know where we can reach you" required>
         <label for="message">Message</label><br>
-        <textarea name="" id="message" cols="30" rows="10" placeholder="Please mention your issue..." required></textarea>
-        <button type="submit" id="secondaryBtn">Send Message</button>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Please mention your message..." required></textarea>
+        <input type="submit" value="Send">
       </form>
     </div>
   </div>
