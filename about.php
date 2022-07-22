@@ -23,28 +23,6 @@
       </p>
       <p>I will keep posting more important posts on my Website for all of you. Please give your support and love.
       </p>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus nam molestias eum perspiciatis ea,
-        aperiam officiis ipsam veniam voluptate aliquid? Consequuntur nemo, aut libero cumque dignissimos
-        maiores consequatur dolore. Ipsum.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui facilis, cupiditate tempore dolorum
-        recusandae blanditiis ad provident ratione? Impedit atque rem laudantium eius iure alias quam modi
-        earum, provident vel molestiae pariatur quo officia nihil dignissimos asperiores qui nemo. Recusandae
-        non laborum rem qui! Dolorum natus accusamus libero alias, voluptatibus, ex consectetur optio ut quod
-        ipsam facere fugiat, dolores rem sunt laudantium culpa. Quasi fugiat maiores nulla ducimus cum quibusdam
-        dolorem tempore, deleniti expedita debitis! Iste, natus odit. Placeat nostrum consequatur accusamus,
-        pariatur quo illum aperiam distinctio? Sapiente dolorum maiores cupiditate facilis velit, architecto ex
-        necessitatibus obcaecati commodi est distinctio quae hic rem corporis, nostrum non impedit? Ipsum,
-        asperiores? Deserunt tenetur laudantium sit maiores ut vitae vel sapiente eligendi hic.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In facilis fugiat quaerat quae! Voluptates,
-        labore voluptatem amet dolorem praesentium aliquam inventore laboriosam necessitatibus cumque, id iusto
-        consectetur corporis nam dolorum explicabo aliquid nobis, aut sequi nisi error nostrum repellat veniam.
-        Quo enim nesciunt pariatur quos, tenetur totam natus? Aliquam reprehenderit, ad, voluptates enim nobis
-        quos sit dolorum assumenda eos voluptatem eum! Itaque quasi suscipit temporibus incidunt aliquam.
-        Voluptatibus sapiente dolore, rem, perferendis eligendi ab qui, ipsa aliquid accusantium ipsam iste
-        nihil unde asperiores! Sint, dignissimos illo veniam voluptatem nesciunt cupiditate nulla ipsa explicabo
-        mollitia ducimus exercitationem id nostrum soluta fugiat facilis, quisquam quia nam, aperiam eos
-        repudiandae est obcaecati? Voluptas doloribus odio illo veniam ullam ducimus quidem cum maxime! Soluta
-        illum ut quae ratione possimus id, animi corporis, laudantium, incidunt ipsa totam iste quia.</p>
       <p style="font-weight: bold; text-align: center;">Thanks For Visiting Our Site<br><br>
         <span style="color: blue; font-size: 16px; font-weight: bold; text-align: center;">Have a nice
           day!</span>
